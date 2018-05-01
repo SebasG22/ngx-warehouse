@@ -1,3 +1,5 @@
+import { LoginEmail } from "../models/auth.model";
+
 export class Login {
   static readonly type = '[ auth ] login user';
   constructor(public payload: {
@@ -8,5 +10,5 @@ export class Login {
 
 export class LoginSuccess {
   static readonly type = '[ auth ] login user';
-  constructor(public payload: string) { }
+  constructor(public payload: LoginEmail) { }
 }

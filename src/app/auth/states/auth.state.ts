@@ -1,5 +1,7 @@
 import { State, Action, StateContext } from '@ngxs/store';
 import { Login } from '../actions/auth.actions';
+import { AuthService } from '../services/auth.service';
+import { map } from 'rxjs/operators/map';
 
 export interface AuthStateModel {
   email: string;
@@ -22,8 +24,16 @@ export class AuthState {
 
   @Action(Login)
   async login({ patchState }: StateContext<AuthStateModel>, { payload }: Login) {
-    await
-      patchState({ email: payload.email })
+    await this.authService.loginUser(payload)
+      .pipe(
+        map((data) => {
+          console.log('data', data);
+          if (data) {
+
+          }
+        })
+      )
+    patchState({ email: payload.email })
   }
 
 }
