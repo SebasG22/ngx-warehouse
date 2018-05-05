@@ -3,8 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
-  { path: 'auth', loadChildren: './auth/auth.module#AuthModule' }
+  { path: '', loadChildren: './auth/auth.module#AuthModule' },
 ];
 
 @NgModule({

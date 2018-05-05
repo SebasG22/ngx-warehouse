@@ -3,6 +3,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxsModule } from '@ngxs/store';
+import { NgxsFormPluginModule } from '@ngxs/form-plugin';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
@@ -18,10 +19,9 @@ import { SERVICES } from './auth/services';
     OnsenModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
     NgxsModule.forRoot([
-      AuthState
-    ])
+    ]),
+    NgxsFormPluginModule.forRoot(),
   ],
   providers: [
     SERVICES

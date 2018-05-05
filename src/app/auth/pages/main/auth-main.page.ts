@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'page-auth-main',
-  templateUrl: 'auth-main.page.html'
+  selector: 'auth-main-page',
+  templateUrl: 'auth-main.page.html',
+  styleUrls: ['auth-main.page.scss']
 })
 
 export class AuthMainPage implements OnInit {

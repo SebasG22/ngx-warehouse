@@ -1,2 +1,31 @@
-@import '../node_modules/onsenui/css/onsenui.css';
-@import '../node_modules/onsenui/css/onsen-css-components.css';
+@import '../node_modules/onsenui/css/onsenui.min.css';
+@import '../node_modules/onsenui/css/onsen-css-components.min.css';
+
+@font-face {
+  font-family: '1';
+  src: url('/assets/fonts/SFCompactDisplay-Light.ttf') format('truetype');;
+}
+
+@font-face {
+  font-family: '2';
+  src: url('/assets/fonts/SFCompactDisplay-Ultralight.ttf') format('truetype');;
+}
+
+.content{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.page__background{
+  background-color: #000;
+}
+
+.center{
+  display: block;
+  margin: 0 auto;
+}
+
+.text_center{
+  text-align: center;
+}
+

@@ -1,1 +1,29 @@
-<h1></h1>
+<div class="email-wrapper">
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <ons-list modifier="nodivider">
+      <ons-list-item>
+        <div class="left">
+          <i class="material-icons">email</i>
+        </div>
+        <div class="center">
+          <ons-input type="email" modifier="underbar" placeholder="Correo Electronico"> </ons-input>
+        </div>
+      </ons-list-item>
+    </ons-list>
+    <ons-list>
+      <ons-list-item>
+        <div class="left">
+          <i class="material-icons">security</i>
+        </div>
+        <div class="center">
+          <ons-input type="password" modifier="underbar" placeholder="Contraseña"></ons-input>
+        </div>
+        <div class="right">
+          <i class="material-icons">remove_red_eye</i>
+        </div>
+      </ons-list-item>
+    </ons-list>
+    <br>
+    <button type="submit" class="center text_center button"> Enviar </button>
+  </form>
+</div>

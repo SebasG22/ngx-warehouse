@@ -1,7 +1,8 @@
 import { State, Action, StateContext } from '@ngxs/store';
 import { Login } from '../actions/auth.actions';
 import { AuthService } from '../services/auth.service';
-import { map } from 'rxjs/operators/map';
+import { map, catchError } from 'rxjs/operators';
+import * as ons from 'onsenui';
 
 export interface AuthStateModel {
   email: string;
@@ -23,17 +24,19 @@ export class AuthState {
   constructor(private authService: AuthService) { }
 
   @Action(Login)
-  async login({ patchState }: StateContext<AuthStateModel>, { payload }: Login) {
-    await this.authService.loginUser(payload)
-      .pipe(
-        map((data) => {
-          console.log('data', data);
-          if (data) {
-
-          }
-        })
-      )
-    patchState({ email: payload.email })
+  login({ patchState }: StateContext<AuthStateModel>, { payload }: Login) {
+    this.authService.loginUser(payload).then((data) => {
+      patchState({ email: payload.email, password: payload.password })
+      ons.notification.alert({
+        title: 'Success',
+        messageHTML: 'Se ha logueado correctamente',
+      });
+    }).catch(error => {
+      ons.notification.alert({
+        title: 'Error',
+        messageHTML: 'El correo y/o contraseña que proporcionaste no concuerda con ninguna cuenta asociada',
+      });
+    })
   }
 
 }
