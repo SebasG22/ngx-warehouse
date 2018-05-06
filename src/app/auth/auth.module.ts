@@ -8,6 +8,8 @@ import { SERVICES } from './services';
 import { AuthRoutingModule } from './auth.routing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { OnsenModule } from 'ngx-onsenui';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -15,6 +17,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     ReactiveFormsModule,
     AngularFireAuthModule,
     AuthRoutingModule,
+    SharedModule,
     NgxsModule.forFeature([
       AuthState
     ])
