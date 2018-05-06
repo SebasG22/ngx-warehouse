@@ -1,5 +1,5 @@
 @import '../node_modules/onsenui/css/onsenui.min.css';
-@import '../node_modules/onsenui/css/onsen-css-components.min.css';
+@import '../node_modules/onsenui/css/dark-onsen-css-components.min.css';
 
 @font-face {
   font-family: '1';
@@ -11,7 +11,7 @@
   src: url('/assets/fonts/SFCompactDisplay-Ultralight.ttf') format('truetype');;
 }
 
-.content{
+.responsive_content{
   max-width: 700px;
   margin: 0 auto;
 }

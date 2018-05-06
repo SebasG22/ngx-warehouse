@@ -13,5 +13,12 @@ export class TabBarMainComponent implements OnInit {
   public tab1 = Tab4Page;
   public tab2 = Tab5Page;
 
-  ngOnInit() { }
+  ngOnInit() {
+    setTimeout(() => {
+      let notif = document.createElement('span');
+      notif.className = "notification";
+      notif.innerText = '100';
+      document.getElementsByClassName("tabbar__icon")[4].appendChild(notif)
+    }, 1000)
+  }
 }

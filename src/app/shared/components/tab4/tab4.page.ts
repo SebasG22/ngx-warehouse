@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ons-page',
+  selector: 'ons-page[tab4]',
   templateUrl: 'tab4.page.html'
 })
 
