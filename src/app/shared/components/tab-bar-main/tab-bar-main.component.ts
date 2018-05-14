@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Tab4Page } from '../tab4/tab4.page';
 import { Tab5Page } from '../tab5/tab5.page';
+import { WareHouseTabPage } from '../warehouse/warehouse-tab.page';
 
 @Component({
   selector: 'app-tab-bar-main',
@@ -10,7 +10,7 @@ import { Tab5Page } from '../tab5/tab5.page';
 export class TabBarMainComponent implements OnInit {
   constructor() { }
 
-  public tab1 = Tab4Page;
+  public tab1 = WareHouseTabPage;
   public tab2 = Tab5Page;
 
   ngOnInit() {

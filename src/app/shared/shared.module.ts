@@ -4,11 +4,12 @@ import { COMPONENTS } from './components';
 import { RouterModule } from '@angular/router';
 import { OnsenModule } from 'ngx-onsenui';
 
+
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    OnsenModule
+    OnsenModule,
   ],
   exports: [
     COMPONENTS

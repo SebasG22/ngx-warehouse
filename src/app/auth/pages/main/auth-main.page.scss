@@ -1,11 +1,35 @@
-.logo_wrapper{
-  margin-top: 10%;
-  .logo_warehouse{
-    width: 50%;
-    height: 20%;
+
+@media (max-width: 400px) {
+  .logo_wrapper{
+    margin-top: 10%;
+    .logo_warehouse{
+      width: 50%;
+      height: 20%;
+    }
+    margin-bottom: 5%;
   }
-  margin-bottom: 5%;
+  .login{
+    ons-card{
+      max-width: 90% !important;
+      p {
+        font-family: '1';
+        font-size: 20px;
+      }
+    }
+  }
 }
+
+@media (min-width: 401px) {
+  .logo_wrapper{
+    margin-top: 10%;
+    .logo_warehouse{
+      width: 40%;
+      height: 30%;
+      max-width: 190px;
+      max-height: 190px;
+    }
+    margin-bottom: 2%;
+  }
   .login{
     ons-card{
       max-width: 70% !important;
@@ -15,6 +39,8 @@
       }
     }
   }
+}
+ 
   // .page__background{
   //   background-color: #000 !important;
   // }
