@@ -1,31 +1,4 @@
-<!-- <div class="tabbar">
-  <label class="tabbar__item" [routerLink]="['/']">
-    <button class="tabbar__button">
-      <i class="tabbar__icon ion-stop"></i>
-      <div class="tabbar__label">Home</div>
-    </button>
-  </label>
-
-  <label class="tabbar__item" [routerLink]="['/home']">
-    <button class="tabbar__button">
-      <i class="tabbar__icon ion-record"></i>
-      <div class="tabbar__label">Two</div>
-    </button>
-  </label>
-
-  <label class="tabbar__item">
-    <button class="tabbar__button">
-      <i class="tabbar__icon ion-star"></i>
-      <div class="tabbar__label">Three</div>
-    </button>
-  </label>
-</div> -->
-
-
-
-
-
-<ons-tabbar swipeable>
+<ons-tabbar swipeable (prechange)="changeTab($event)">
   <div class="tabbar__content"></div>
   <div class="tabbar">
     <ons-tab label="Bodega" icon="ion-cube" [page]="tab1"></ons-tab>
