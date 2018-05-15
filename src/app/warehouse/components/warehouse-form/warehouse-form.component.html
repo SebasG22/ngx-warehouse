@@ -1,1 +1,20 @@
-<p> Warehouse Component </p>
+<div class="email-wrapper">
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <ons-list modifier="nodivider">
+      <ons-list-item>
+        <div class="center">
+          <ons-input float type="text" modifier="underbar" placeholder="Nombre"> </ons-input>
+        </div>
+      </ons-list-item>
+    </ons-list>
+    <ons-list>
+      <ons-list-item>
+        <div class="center">
+          <ons-input float type="number" modifier="underbar" placeholder="Cantidad"></ons-input>
+        </div>
+      </ons-list-item>
+    </ons-list>
+    <br>
+    <button type="submit" class="center text_center button"> Guardar </button>
+  </form>
+</div>

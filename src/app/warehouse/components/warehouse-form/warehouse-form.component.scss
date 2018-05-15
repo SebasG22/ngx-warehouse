@@ -1,0 +1,16 @@
+@import "~variables.scss";
+.email-wrapper{
+  button{
+    width: 50%;
+    // background-color: $primary;
+  }
+  .list{
+    background-size: 100% 0px,100% 0px !important;
+  }
+  ons-input{
+    width: 100%;
+  }
+  .password_button{
+    background-color: $primary;
+  }
+}

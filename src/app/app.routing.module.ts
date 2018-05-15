@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   // { path: '', loadChildren: './auth/auth.module#AuthModule' },
+  { path: 'warehouse/item-form', loadChildren: './warehouse/warehouse.module#WarehouseModule' }
 ];
 
 @NgModule({

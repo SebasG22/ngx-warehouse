@@ -1,16 +1,16 @@
-<ng-container *ngIf="sharedState$ | async as sharedState">
+<div>
   <ons-toolbar>
     <div class="left">
       <ons-ripple></ons-ripple>
       <i class="material-icons" style="margin-top: 15px; margin-left: 20px; font-size: 30px">
-        bar_chart
+        arrow_back_ios
       </i>
       <ons-icon icon="ion-airplane" size="1x"></ons-icon>
     </div>
     <div class="center text_center">
-      {{ sharedState.name }}
+      Crear Articulo
     </div>
-    <div class="right" (click)="onGoTo(sharedState.currentTab)">
+    <div class="right">
       <ons-ripple></ons-ripple>
       <i class="material-icons" style="margin-top: 15px; margin-right: 20px; font-size: 30px">
         add
@@ -19,6 +19,13 @@
   </ons-toolbar>
   <div class="background"></div>
   <div class="content">
-    <app-tab-bar-main></app-tab-bar-main>
+    <br>
+    <p> &nbsp </p>
+    <div class="login">
+      <ons-card class="center">
+        <p class="text_center"> Ingresa sesión con tus credenciales</p>
+        <app-warehouse-form></app-warehouse-form>
+      </ons-card>
+    </div>
   </div>
-</ng-container>
+</div>
