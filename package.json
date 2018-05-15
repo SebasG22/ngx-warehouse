@@ -24,6 +24,7 @@
     "@firebase/app": "^0.1.10",
     "@ngxs/form-plugin": "^3.0.0-rc.3",
     "@ngxs/store": "^2.0.0",
+    "angular-filepond": "^1.0.5",
     "angularfire2": "^5.0.0-rc.6.0",
     "core-js": "^2.4.1",
     "firebase": "^4.6.0",

@@ -8,6 +8,7 @@
     }
     margin-bottom: 5%;
   }
+  .login{
     ons-card{
       max-width: 90% !important;
       p {
@@ -15,6 +16,7 @@
         font-size: 20px;
       }
     }
+  }
 }
 
 @media (min-width: 401px) {
@@ -28,6 +30,7 @@
     }
     margin-bottom: 2%;
   }
+  .login{
     ons-card{
       max-width: 70% !important;
       p {
@@ -35,6 +38,7 @@
         font-size: 20px;
       }
     }
+  }
 }
  
   // .page__background{

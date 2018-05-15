@@ -10,7 +10,7 @@ import { environment } from '../environments/environment';
 import { AuthState } from './auth/states/auth.state';
 import { SERVICES } from './auth/services';
 import { MODULES } from './modules';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { FilePondModule } from 'angular-filepond';
 
 @NgModule({
   declarations: [
@@ -24,6 +24,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     NgxsModule.forRoot([
     ]),
     NgxsFormPluginModule.forRoot(),
+    FilePondModule
   ],
   providers: [
     SERVICES

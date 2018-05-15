@@ -1,5 +1,8 @@
 <div class="email-wrapper">
   <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <FilePond #myPond name="my-name" className="my-class" labelIdle="Drop files here..." allowMultiple="true" acceptedFileTypes="image/jpeg, image/png"
+      [files]="myFiles">
+    </FilePond>
     <ons-list modifier="nodivider">
       <ons-list-item>
         <div class="center">
