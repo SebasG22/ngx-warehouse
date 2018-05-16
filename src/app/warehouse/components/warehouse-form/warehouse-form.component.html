@@ -1,23 +1,47 @@
 <div class="email-wrapper">
   <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
-    <FilePond #myPond name="my-name" className="my-class" labelIdle="Drop files here..." allowMultiple="true" acceptedFileTypes="image/jpeg, image/png"
-      [files]="myFiles">
-    </FilePond>
-    <ons-list modifier="nodivider">
-      <ons-list-item>
+    <input #fileInput type="file" class='file_btn' accept="image/*" (change)="showSomething()">
+
+    <div class="outer">
+      <img id="imageToShow" src="assets/icons/photo-camera.svg" class="canvas" (click)="openFileInput()">
+      <!-- <canvas #canvas class="canvas"></canvas> -->
+    </div>
+    <p> &nbsp;</p>
+
+    <ons-list>
+      <ons-list-item modifier="nodivider">
         <div class="center">
           <ons-input float type="text" modifier="underbar" placeholder="Nombre"> </ons-input>
         </div>
       </ons-list-item>
-    </ons-list>
-    <ons-list>
-      <ons-list-item>
+      <ons-list-item modifier="nodivider">
         <div class="center">
           <ons-input float type="number" modifier="underbar" placeholder="Cantidad"></ons-input>
         </div>
       </ons-list-item>
+      <ons-list-item modifier="nodivider">
+        <div class="center">
+          Opciones Avanzadas
+        </div>
+        <div class="right">
+          <ons-switch modifier="material"></ons-switch>
+        </div>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+        <div class="center">
+          <ons-input float type="text" modifier="underbar" placeholder="Precio"> </ons-input>
+        </div>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+        <div class="center">
+          <ons-input float type="number" modifier="underbar" placeholder="Categorias"></ons-input>
+        </div>
+      </ons-list-item>
     </ons-list>
+
     <br>
+
+
     <button type="submit" class="center text_center button"> Guardar </button>
   </form>
 </div>
