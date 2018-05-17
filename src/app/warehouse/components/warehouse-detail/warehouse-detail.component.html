@@ -1,0 +1,65 @@
+<div class="email-wrapper">
+  <div class="outer">
+    <img id="imageToShow" src="assets/icons/photo-camera.svg" class="canvas">
+    <!-- <canvas #canvas class="canvas"></canvas> -->
+  </div>
+  <p> &nbsp;</p>
+
+
+  <ons-list>
+    <ons-segment #segment class="segment">
+      <button>General</button>
+      <button>Historial</button>
+    </ons-segment>
+
+
+    <ng-container *ngIf="segment.getActiveButtonIndex() === 0">
+      <ons-list-item modifier="nodivider">
+        <div class="center">
+          Nombre
+        </div>
+        <div class="right">
+          Samsung S9
+        </div>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+        <div class="center">
+          <strong> Cantidad : </strong>
+        </div>
+        <div class="right">
+          N/A
+        </div>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+        <div class="center">
+          Opciones Avanzadas
+        </div>
+        <div class="right">
+          <ons-switch modifier="material"></ons-switch>
+        </div>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+        <div class="center">
+          <p> Precio </p>
+        </div>
+      </ons-list-item>
+      <ons-list-item modifier="nodivider">
+        <div class="center">
+          Categorias
+        </div>
+      </ons-list-item>
+    </ng-container>
+
+    <ng-container *ngIf="segment.getActiveButtonIndex() === 1">
+      <ons-list-item modifier="nodivider">
+        <div class="center">
+          Sebastián ha modificado el articulo
+        </div>
+        <div class="left">
+          Samsung S9
+        </div>
+      </ons-list-item>
+    </ng-container>
+
+  </ons-list>
+</div>

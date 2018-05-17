@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ons-page[warehouse_tab]',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 
 export class WareHouseTabPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() { }
+
+  onGoToItemDetails() {
+    this.router.navigate(['/warehouse/item-detail']);
+  }
 }
