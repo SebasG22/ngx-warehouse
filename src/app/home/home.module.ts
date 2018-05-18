@@ -4,13 +4,15 @@ import { PAGES, SUB_PAGES } from './pages';
 import { HomeRoutingModule } from './home.routing';
 import { SharedModule } from '../shared/shared.module';
 import { OnsenModule } from 'ngx-onsenui';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     HomeRoutingModule,
     OnsenModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   exports: [],
   declarations: [PAGES],

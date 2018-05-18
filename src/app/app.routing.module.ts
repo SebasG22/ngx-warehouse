@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
   // { path: '', loadChildren: './auth/auth.module#AuthModule' },
   { path: 'warehouse', loadChildren: './warehouse/warehouse.module#WarehouseModule' },
-
+  { path: 'tracking', loadChildren: './tracking/tracking.module#TrackingModule' },
 ];
 
 @NgModule({
