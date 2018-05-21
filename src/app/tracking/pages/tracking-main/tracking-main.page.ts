@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ons-page[tracking_main]',
@@ -6,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class TrackingMainPage implements OnInit {
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() { }
+
+  public onGoToTrackingEmbed(company) {
+    this.router.navigate(['/tracking/embed'], { queryParams: { company: company } });
+  }
 }

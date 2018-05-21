@@ -1,6 +1,6 @@
 <div>
   <ons-toolbar>
-    <div class="left" style="width: 70px;">
+    <div class="left" style="width: 70px;" (click)="onGoBack()">
       <ons-ripple></ons-ripple>
       <i class="material-icons" style="margin-top: 15px; margin-left: 20px; font-size: 25px">
         arrow_back_ios
@@ -22,14 +22,7 @@
     <br>
     <p> &nbsp; </p>
     <div class="login">
-      <ons-card (click)="onGoToTrackingEmbed('servientrega')">
-        <div class="title text_center">Servientrega</div>
-        <img src="https://www.servientrega.com/StaticContent/images/logo3.png" style="width: 150px; display: block; margin: 0 auto">
-      </ons-card>
-      <ons-card (click)="onGoToTrackingEmbed('tcc')">
-        <div class="title text_center">TCC</div>
-        <img src="https://storage.googleapis.com/tcc-cloud.appspot.com/1/2017/12/logo-dark-uai-258x179.png" style="width: 150px; display: block; margin: 0 auto">
-      </ons-card>
+      <app-tracking-embed></app-tracking-embed>
     </div>
   </div>
 </div>

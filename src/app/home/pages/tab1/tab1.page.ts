@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Component({
   selector: 'ons-page',
   templateUrl: 'tab1.page.html'
@@ -7,15 +8,13 @@ import { HttpClient } from '@angular/common/http';
 
 export class Tab1Page implements OnInit {
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) { }
 
   ngOnInit() { }
 
-  tracking() {
-    // this.http.get('https://web.servientrega.com/PortalServientrega/WebSitePortal/RastreoEnvioDetalle.html?Guia=23586505')
-    //   .subscribe((data) => {
-    //     console.log('response', data);
-    //   })
+  goToTrackingPage() {
+    this.router.navigate(['/tracking']);
   }
 }
