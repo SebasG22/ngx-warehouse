@@ -10,7 +10,6 @@ import { environment } from '../environments/environment';
 import { AuthState } from './auth/states/auth.state';
 import { SERVICES } from './auth/services';
 import { MODULES } from './modules';
-import { FilePondModule } from 'angular-filepond';
 
 @NgModule({
   declarations: [
@@ -23,8 +22,7 @@ import { FilePondModule } from 'angular-filepond';
     AngularFireModule.initializeApp(environment.firebase),
     NgxsModule.forRoot([
     ]),
-    NgxsFormPluginModule.forRoot(),
-    FilePondModule
+    NgxsFormPluginModule.forRoot()
   ],
   providers: [
     SERVICES

@@ -1,9 +1,33 @@
-<ons-splitter #splitter>
-  <ons-splitter-side [page]="sidePage" side="left" width="100%" collapse swipeable>
-  </ons-splitter-side>
+<div class="overlay overlay-contentpush">
+  <button type="button" class="overlay-close">Close</button>
+  <nav>
+    <ul>
+      <li>
+        <a href="#">Inicio</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Work</a>
+      </li>
+      <li>
+        <a href="#">Clients</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="container">
+  <ons-splitter #splitter>
+    <ons-splitter-side [page]="sidePage" side="left" width="100%" collapse swipeable>
+    </ons-splitter-side>
 
-  <ons-splitter-content [page]="contentPage">
+    <ons-splitter-content [page]="contentPage">
 
-  </ons-splitter-content>
+    </ons-splitter-content>
 
-</ons-splitter>
+  </ons-splitter>
+</div>

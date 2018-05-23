@@ -6,7 +6,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'ons-page',
-  templateUrl: 'tab2.page.html'
+  templateUrl: 'tab2.page.html',
+  styleUrls: ['tab2.page.scss']
 })
 
 export class Tab2Page implements OnInit {

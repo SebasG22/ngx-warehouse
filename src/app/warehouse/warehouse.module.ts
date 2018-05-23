@@ -6,12 +6,10 @@ import { PAGES } from './pages';
 import { COMPONENTS } from './components';
 import { WarehouseRoutingModule } from './warehouse.router';
 import { OnsenModule } from 'ngx-onsenui';
-import { FilePondModule } from 'angular-filepond';
 
 @NgModule({
   imports: [
     CommonModule,
-    FilePondModule,
     ReactiveFormsModule,
     WarehouseRoutingModule
   ],

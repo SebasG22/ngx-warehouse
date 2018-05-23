@@ -30,6 +30,6 @@ export class WarehouseDetailPage implements OnInit {
 
   public goBack() {
     this.location.back();
-    this.router
+   // this.router
   }
 }
